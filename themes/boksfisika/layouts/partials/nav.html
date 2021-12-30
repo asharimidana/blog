@@ -1,0 +1,34 @@
+<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark  bg-utama">
+    <div class="container">
+
+        <a class="navbar-brand text-white" href="/"> {{ .Site.Title }} </a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {{ if .IsHome }}
+                {{ else }}
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                {{ end }}
+                <li class="nav-item">
+                    <a class='nav-link text-white {{ if eq .Type "artikel"}} active {{end}}' href="/artikel">about</a>
+                </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0" action="https://www.google.co.id" id="cse-search-box">
+                <input type="hidden" name="cx" value="" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="hidden" name="sa" value="search" />
+                <input class="form-control mr-sm-2" type="text" name="q" placeholder="Kata Kunci" aria-label="Search" style="height: 1.8rem;">
+                <button class="btn-link border-0  my-2 my-sm-0 " type="submit"><span class="material-icons text-white">search</span></button>
+                
+            </form> -->
+            <!-- <script async src="https://cse.google.com/cse.js?cx=661cc1d614ba95d87"></script> -->
+            <div class="gcse-search"></div>
+        </div>
+    </div>
+</nav>

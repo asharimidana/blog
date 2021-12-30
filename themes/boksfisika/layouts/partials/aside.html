@@ -1,0 +1,26 @@
+<div class="container">
+    <!-- <aside>
+
+        <div class="widget">
+            <h3>Daftar Gambar</h3>
+            <a href="" target="_blank">
+                <img src="/img/default.svg" alt="boksfisika"/>
+            </a>
+        </div>
+        
+    </aside> -->
+    <h4 class="mb-3">Artikel Terbaru</h4>
+    <hr>
+    {{ range first 4 (.Site.RegularPages) }}        
+        <div class="card p-2 mb-1 shadow-sm d-flex  ">
+            <div class="row">
+                <div class="col-12 pl-2 ">
+                    <p class="font-weight-bold pl-2"><a class="text-dark" href="{{ .RelPermalink }}">
+                        {{ substr .Title 0 59 }}{{ if ge (len .Title) 59}} ...
+                        {{end}}
+                    </a></p>
+                </div>
+            </div>   
+        </div>
+    {{ end }}
+</div>

@@ -1,0 +1,33 @@
+<article class="card-post">
+    <h2 class="my-4 text-center">Artikel Terbaru</h2>
+    <h5 class="font-weight-light  text-center mb-4" style="
+    font-weight: 360; " >Artikel</h5>
+    <div class="container">
+        <div class="row border pb-2">
+
+            {{ $paginator := .Paginate ( .Site.RegularPages) 6 }}
+            {{ range $paginator.Pages }}
+                    <div class="col-md-12 col-12 ">
+                        <div class="p-1 my-0">
+                                <h6 class=" mb-0">
+                                    <a class="text-dark" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                </h6>
+                                {{ if isset .Params "description" }}
+                                    <small class="text-muted py-0">{{ .Description }}</small>
+                                {{end}}
+                                <hr class="my-0 py-0" style="border-top: 1px dashed #8c8b8b;"> 
+                        </div>
+
+                    </div>
+                    
+                {{ end }}
+            
+            <div class="container">
+                {{ partial "pagination.html" .}}
+            </div>
+            
+        </div>
+    </div>
+</article>
+
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+
+        {{ partial "nav.html" . }}
+
+        {{ partial "post-grid.html" . }}
+
+        <div class="d-none d-sm-block">
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "js-init.html" . }}
+       
+        
+    </body>
+</html>

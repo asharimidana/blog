@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script data-ad-client="ca-pub-9126848407157393" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {{ partial "head.html" . }}
+
+        <style>
+            h1, h2, h3, h4, h5, h6{
+                margin: 0.9rem 0 !important;
+            }
+            p {
+                margin-bottom: 0.6rem;
+            }
+        </style>
+    </head>
+    <body>
+        {{ partial "nav.html" . }}
+
+        <div class="container py-5 mt-5">
+            <div class="row">
+
+                <div class="col-sm-12 col-lg-8 mb-5 border-md px-0">
+                    <article>
+                        <div class="">
+                           <div class="card-body p-md-5">
+                                
+                               <div class="post-header mb-3">
+                                    
+                                    <div class="mb-3">
+                                        {{ if isset .Params "author"}}
+                                        {{ $contoh := index  .Site.Author .Params.author }}
+                                        <img src="{{ $contoh.image }}" class="rounded-circle " width="37" height="37" />
+                                            <a href="{{ $contoh.homepage }}" class="text-dark ml-3">
+                                                {{ $contoh.name}}           
+                                            </a> 
+                                        {{ else }}
+                                        <img src="" class="rounded-circle bg-utama mr-3" width="37" height="37" />
+                                        asharimidana
+                                        {{ end }}
+                                        <small class="text-muted"> - Diubah <time>{{ .Date.Format "02 Jan 2006" }}</time></small>
+                                    </div>
+
+                                    <h4 class="card-title mb-3">{{ .Title }}</h4>
+                                    <p> 
+                                        
+                                    </p>
+                                    
+                                    <div>
+                                        <hr>
+                                        {{ range .Params.tags }}
+                                        <span class="badge badge-primary">
+                                             #<a class="text-white" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                        </span> 
+                                        {{ end }}
+                                    </div>
+
+                                </div>
+                                <div class="post-content text-justify text-dark" >
+                                    <img class='card-img-top rounded mb-3' 
+                                        src='{{ if eq .Params.Image "" }}
+                                            {{else}}
+                                                {{ .Params.Image}}
+                                            {{end}}'
+                                        alt='{{ .Title }}'>
+                                    {{ .Content }}
+                                </div>
+                                    {{ partial "share.html" . }}
+                                <div class="post-footer mt-4">
+                                    {{ partial "disqus.html" . }}
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-4 p-0">
+                       {{ partial "aside.html" . }}
+                    </div>
+            </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+        {{ partial "js-init.html" . }}
+    </body>
+</html>

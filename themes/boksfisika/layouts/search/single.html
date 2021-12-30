@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- {{ partial "head.html" . }} -->
+        <!-- isi dengan partial milik anda -->
+    </head>
+    <body class="bg-light">
+
+        <!-- {{ partial "nav.html" . }} -->
+        <!-- isi dengan partial milik anda -->
+
+        <div id="search-app" class="container">
+            <!-- Search form section -->
+            <section class="my-5 row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="input-group mb-3">
+                            <input type="text" v-model="q" class="form-control" placeholder="Kata kunci..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button" v-on:click="doSearch()">Cari</button>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- Search result -->
+            <section class="row mb-5">
+                <post-card
+                    v-for="post in searchResult.items"  
+                    v-bind:post="post">
+                </post-card>
+            </section>
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+        <script src="/js/search.js"></script>
+    </body>
+</html>

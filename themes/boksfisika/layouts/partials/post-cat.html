@@ -1,0 +1,91 @@
+<div class="container my-5">
+    <h2 class=" text-center">Artikel Berdasarkan Kategori</h2>
+    <p style="font-size: 1.1rem;
+    font-weight: 300; " class="text-center">Baca Artikel Yang Sesuai Dengan Minatmu</p>
+    <hr class="mb-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="container border py-3 shadow-sm">
+                <h4 class="pb-4">Teknologi</h4>
+                {{ $paginator := .Paginate ( .Site.RegularPages) 6 }}
+                {{ range $paginator.Pages }}
+                {{ if isset .Params "categories" }}
+                {{ if and (eq "fisika" .Type) (eq (index .Params.categories 0) "teknologi") }}
+                        <hr>
+                        <div class="row">
+                            <div class="col-3 py-0">
+                                <a href="{{ .RelPermalink }}">
+                                    <img class='mr-2 img-50 border rounded mt-2' 
+                                    src='{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}'
+                                    alt='{{ .Title }}'>
+                                </a>
+                            </div>
+                            <div class="col-9 pl-2 py-0">
+                                <p class="font-weight-bold"><a class="text-dark" href="{{ .RelPermalink }}">{{ substr .Title 0 83 }}{{ if ge (len .Title) 83}} ...
+                                    {{end}}</a></p>
+                            </div>
+                        </div>  
+                        {{ end }}
+                    {{ end }}  
+                {{ end }}
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="container border py-3 shadow-sm rounded">
+                <h4 class="pb-4">Gaya dan Usaha</h4>
+                {{ $paginator := .Paginate ( .Site.RegularPages) 6 }}
+                {{ range $paginator.Pages }}
+                {{ if isset .Params "categories" }}
+                {{ if and (eq "fisika" .Type) (eq (index .Params.categories 0) "gaya dan usaha") }}
+                        <hr>
+                        <div class="row">
+                            <div class="col-3 py-0">
+                                <a href="{{ .RelPermalink }}">
+                                    <img class='mr-2 img-50 border rounded mt-2' 
+                                    src='{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}'
+                                    alt='{{ .Title }}'>
+                                </a>
+                            </div>
+                            <div class="col-9 pl-2 py-0">
+                                <p class="font-weight-bold"><a class="text-dark" href="{{ .RelPermalink }}">{{ substr .Title 0 83 }}{{ if ge (len .Title) 83}} ...
+                                    {{end}}</a></p>
+                            </div>
+                        </div>  
+                        {{ end }}
+                    {{ end }}  
+                {{ end }}
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="container border py-3 shadow-sm rounded">
+                <h4 class="pb-4">Turunan</h4>
+                {{ $paginator := .Paginate ( .Site.RegularPages) 4 }}
+                {{ range $paginator.Pages }}
+                {{ if isset .Params "categories" }}
+                {{ if and (eq "matematika" .Type) (eq (index .Params.categories 0) "turunan") }}
+                        <hr>
+                        <div class="row">
+                            <div class="col-3 py-0">
+                                <a href="{{ .RelPermalink }}">
+                                    <img class='mr-2 img-50 border rounded mt-2' 
+                                    src='{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}'
+                                    alt='{{ .Title }}'>
+                                </a>
+                            </div>
+                            <div class="col-9 pl-2 py-0">
+                                <p class="font-weight-bold"><a class="text-dark" href="{{ .RelPermalink }}">{{ substr .Title 0 83 }}{{ if ge (len .Title) 83}} ...
+                                    {{end}}</a></p>
+                            </div>
+                        </div>  
+                        {{ end }}
+                    {{ end }}  
+                {{ end }}
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</div>

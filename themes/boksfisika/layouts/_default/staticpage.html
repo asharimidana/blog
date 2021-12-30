@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "nav.html" . -}}
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+        {{- block "main" . }}{{- end }} 
+        </div>
+        <div class="container">
+            <!-- {{ $name := .Site.Taxonomies.Tags }}
+            {{ $name }} -->
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-8 mb-5 card">
+                        <div class="card-body p-md-5">
+                            <div class="post-content text-justify">
+                                {{ .Content }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        {{ partial "aside.html" . }}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
