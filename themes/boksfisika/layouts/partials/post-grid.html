@@ -1,8 +1,7 @@
-<article class="card-post">
-    <h2 class="my-4 text-center">Artikel Terbaru</h2>
-    <h5 class="font-weight-light  text-center mb-4" style="
-    font-weight: 360; " >Artikel</h5>
+<article class="card-post pt-5 pb-2">
     <div class="container">
+        <h5 class="font-weight-light  text-left mb-2 pt-5" style="
+        font-weight: 360; " >Artikel</h5>
         <div class="row border pb-2">
 
             {{ $paginator := .Paginate ( .Site.RegularPages) 6 }}
@@ -13,8 +12,14 @@
                                     <a class="text-dark" href="{{ .RelPermalink }}">{{ .Title }}</a>
                                 </h6>
                                 {{ if isset .Params "description" }}
-                                    <small class="text-muted py-0">{{ .Description }}</small>
+                                    <small class="text-muted py-0 d-block">{{ .Description }}</small>
                                 {{end}}
+
+                                {{ range .Params.tags }}
+                                <div class="btn btn-sm p-0 btn-outline-success text-success">
+                                    #<a class="text-success p-0" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                </div> 
+                                {{ end }}
                                 <hr class="my-0 py-0" style="border-top: 1px dashed #8c8b8b;"> 
                         </div>
 

@@ -1,7 +1,7 @@
 theme = "boksfisika"
 summaryLength = 2 
 
-title = "asharimidana"
+title = "307"
 # Agar front-matter pakai format YAML
 MetaDataFormat = "yaml"
 
@@ -15,7 +15,7 @@ googleAnalytics = "G-BM7MNLDFB6"
 
 # Untuk deskripsi tag meta di homepage
 description = "Blog Seputar Fisika"
-baseURL = "https://boksfisika.web.id/"
+baseURL = "https://asharimidana.github.io/"
 
 paginate = 2
 
@@ -23,8 +23,6 @@ paginate = 2
 [author]
     [author.ari]
         name = "Ashari Midana"
-        homepage = "https://www.instagram.com/boksfisika"
-        image = ""
- 
- summaryLength = 10
+        homepage = ""
+        image = "/profil.jpg" 
 
