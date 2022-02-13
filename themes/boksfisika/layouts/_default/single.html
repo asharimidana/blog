@@ -11,12 +11,20 @@
             p {
                 margin-bottom: 0.6rem;
             }
+            pre.language-markdown {
+                 border-radius: 4px; 
+            }
+            code[class*="language-"], pre[class*="language-"]{
+                color: white;
+                text-shadow: none;
+                border-radius: 4px;
+            }
         </style>
     </head>
     <body>
         {{ partial "nav.html" . }}
 
-        <div class="container py-5 mt-5">
+        <div class="container py-4 mt-5">
             <div class="row">
 
                 <div class="col-sm-12 col-lg-8 mb-5 border-md px-0">

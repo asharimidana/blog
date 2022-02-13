@@ -14,7 +14,24 @@ categories:
 ---
 Bismillahirrahmaanirrahiim..
 
-Darimana kita ada? 
+Setiap manusia yang terlahir di dunia selalu mengiginkan kebahagiaan hidup. Proses pencarian kebahagiaan  tersebut
+menciptakan rasa yang berbeda-beda pada setiap makhluk. Entah diawali dengan rasa sakit, sedih, maupun putus asa.
+Namun dengan proses yang panjang itulah yang akan menciptakan rasa bahagia yang tak bisa digambarkan dengan kata-kata. 
+
+---
+Luangkan waktu Anda beberapa menit kedepan untuk memaknai kalimat ini, maka anda akan merasakan sedikit perubahan pada diri anda yang akan menghantarkan kepada kebahagiaan.
+
+--------------------------------------------------------------------
+Kelebihan manusia dibanding makhluk lain yakni dititipkan akal pada dirinya, yang selalu menemani 
+dalam proses pengambilan keputusan. Sifat alamiah manusia yang memiliki rasa ingin tahu yang tinggi menghantarkan manusia 
+berada pada peradaban yang super canggih seperti sekarang ini, mampu bertahan dalam menghadapi perubahan cuaca maupun 
+pada proses seleksi alam. Dibekali dengan akal membuat manusia tak pernah puas atas apa yang telah dicapai.
+
+---
+Dengan kemajuan teknologi mereka berlomba-lomba menciptakan kehidupan yang otomatis, dimana tak ada lagi kelaparan, tak ada lagi, peperangan, dan tidak ada lagi yang merasakan rasa sakit, yakni pada peradaban **Uthopia** contoh
+
+rimana kita ada? 
+
 
 buat apa kita ada? 
 

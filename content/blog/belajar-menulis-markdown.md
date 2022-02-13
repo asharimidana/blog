@@ -4,10 +4,11 @@ date: 2021-12-30T17:40:32+08:00
 title: "Belajar Menulis Markdown"
 description: pada postingan kali ini kita akan belajar menulis markdown untuk memudahkan dalam membuat conten di blog.
 slug: belajar-menulis-markdown 
+type: blog
+author: ari
 tags:
     - hugo
     - markdown
-
 ---
 Belajar menulis markdown di hugo lengkap dan mudah dimengerti
 

@@ -7,10 +7,9 @@ slug: cara-install-dwm-di-ubuntu
 author: ari
 tags:
     - dwm 
-
+type: blog
 categories:
     - window manager 
-
 ---
 ## Pertama install depedenci
 `sudo apt-get install build-essentials libx11-dev libxinerama-dev sharutils libxft-dev`

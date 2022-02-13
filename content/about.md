@@ -4,7 +4,7 @@ draft: false
 date: 2021-12-31T12:44:19+08:00
 title: "about_"
 type : about
-
+author: ari
 
 ---
 Perkenalkan nama saya Ashari Midana, biasa dipangil ari.. 
