@@ -13,7 +13,6 @@ categories:
     - terminal 
 
 ---
-Assalamualaikum warahmatullahi wabarakaatuh.
 
 Pada artikel kali ini kita akan membahas cara memodifikasi terminal di ubuntu, langsung saja kita langsung praktikan.
 
